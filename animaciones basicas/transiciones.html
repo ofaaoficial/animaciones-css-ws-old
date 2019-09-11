@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .pelota{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+
+            transition-property: width, height;
+            transition-duration: 1s;
+            transition-delay: .5s;
+            transition-timing-function: ease-in-out;
+            /*          
+            ease: Especifica un efecto de transición con un arranque lento, luego rápido, luego finaliza lentamente (esto es predeterminado).
+            linear: Especifica un efecto de transición con la misma velocidad de principio a fin.
+            ease-in: Especifica un efecto de transición con un inicio lento.
+            ease-out: Especifica un efecto de transición con un final lento.
+            ease-in-out: Especifica un efecto de transición con un inicio y fin lentos.
+            cubic-bezier(n,n,n,n): Le permite definir sus propios valores en una función.
+            */
+            /*Cada propiedad a cambiar se separa con una coma*/
+            transition: width1s 250ms ease, height 2s ease;
+            /* transition: porperty | duration | delay | timing-function ; */
+
+            transition: width 1s 0 ease;
+        }
+
+        .pelota:hover{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <div class="pelota"></div>
+    
+</body>
+</html>

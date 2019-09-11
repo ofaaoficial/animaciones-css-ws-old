@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .contenedor{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 2px gold dotted;
+            color: white;
+            
+        }
+        .cuadrado{
+            background-color: #466aad;
+            width: 200px;
+            height: 200px;
+            margin: 5px;
+            transition: 1s;
+        }
+
+        .contenedor:hover .cuadrado:nth-child(1){
+            transform: rotate(45deg);
+        }
+        .contenedor:hover .cuadrado:nth-child(2){
+            transform: rotateX(90deg);
+        }
+        .contenedor:hover .cuadrado:nth-child(3){
+            transform: rotateY(90deg);
+        }
+        .contenedor:hover .cuadrado:nth-child(4){
+            transform: rotateZ(90deg);
+        }
+        .contenedor:hover .cuadrado:nth-child(5){
+            transform: rotateZ(30deg);
+        }
+    </style>
+    <div class="contenedor">
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+    </div>
+</body>
+</html>

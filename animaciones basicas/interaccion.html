@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+        .pelota{
+            height: 100px;
+            width: 100px;
+            background-color: black;            
+            border-radius: 50%;
+            transition: 1s ease-in;
+            position: absolute;
+        }
+
+        .canasta{
+            position: relative;
+            border: 1px solid gold;
+            height: 100px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .canasta:hover .pelota{            
+            background-color: red;
+        }
+        .pelota:nth-child(1){
+            left: 0;
+        }
+
+        .pelota:nth-child(2){
+            right: 0;
+        }
+        .canasta:hover .pelota:nth-child(1){
+            left: calc(50% - 100px);
+        }
+
+        .canasta:hover .pelota:nth-child(2){
+            right: calc(50% - 100px);
+            background-color: blue;
+        }
+
+    </style>
+
+    <div class="canasta">
+        <div class="pelota">Hola</div>
+        <div class="pelota">Mundo</div>
+    </div>
+</body>
+</html>

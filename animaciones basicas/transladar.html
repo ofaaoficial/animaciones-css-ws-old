@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .contenedor{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px dotted green;
+            padding: 5px;
+        }
+
+        .cuadrado{
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            margin: 5px;
+            transition: 1s;
+        }
+        .contenedor:hover .cuadrado{
+            border: 1px solid black;
+        }
+        .contenedor:hover .cuadrado:nth-child(1){
+            transform: translate(100px);
+        }
+
+        .contenedor:hover .cuadrado:nth-child(2){
+            transform: translate(100px, 50px);
+        }
+
+        .contenedor:hover .cuadrado:nth-child(3){
+            transform: translateX(50px);
+        }
+
+        .contenedor:hover .cuadrado:nth-child(4){
+            transform: translateY(-50px);
+        }
+
+        .contenedor{
+            perspective: 100px;
+            perspective-origin: center;
+        }
+        .contenedor:hover .cuadrado:nth-child(5){
+            transform: translateZ(50px);
+        }
+
+        .contenedor:hover .cuadrado:nth-child(6){
+            transform: translate3d(-100px);   
+        }
+    </style>
+    <div class="contenedor">
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+        <div class="cuadrado"></div>
+    </div>
+    
+</body>
+</html>

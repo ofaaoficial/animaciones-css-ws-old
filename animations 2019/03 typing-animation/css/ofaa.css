@@ -1,0 +1,42 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("fonts/Roboto-Bold.ttf") format('ttf');
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-size: 10vw;
+    background: radial-gradient(ellipse, #00c4ff, #0985aa);
+}
+
+.text-writing{
+    height: 10vw;
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+}
+
+.text-writing:before{
+    position: absolute;
+    content: '';
+    left: 100%;
+    width: 4px;
+    height: 10vw;
+    background-color: #F44336;
+    animation: flicker .8s infinite;
+}
+
+@keyframes flicker {
+    from{ opacity: 1; }
+    to{ opacity: 0; }
+}

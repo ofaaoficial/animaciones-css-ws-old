@@ -1,0 +1,186 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: 1s;
+}
+
+body{
+    background-color: #053f6f;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.btn{
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    border: transparent;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+    transition: all .5s linear;
+    color: #ffffff;
+}
+
+
+.btn:after, .btn:before{
+    position: absolute;
+    content: '';
+    transition: all .5s linear;
+}
+.effect1{
+    background-color: #1e95bc;
+}
+.effect1:before{
+    background-color: #1fd6ff;
+    width: 140%;
+    height: 100%;
+    top: 0;
+    left: 125%;
+    transform: skew(45deg);
+    z-index: -1;
+}
+.effect1:hover:before{
+    left: -20%;
+}
+
+.effect2{
+    background-color: #9c27b0;
+}
+
+.effect2:after{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #d33aee;
+    right: 120%;
+    transform: skew(40deg);
+    z-index: -1;
+}
+
+.effect2:before{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: #d33aee;
+    left: 120%;
+    transform: skew(40deg);
+    z-index: -1;
+}
+.effect2:hover:before{
+    left: 49%;
+}
+.effect2:hover:after{
+    right: 49%;
+}
+
+.effect3{
+    background-color: #009688;
+}
+
+.effect3:before{ top: 0; right: 0;}
+.effect3:after{ bottom: 0; left: 0;}
+
+.effect3:before, .effect3:after{
+    height: 2px; width: 0;
+    background-color: #ffffff;
+}
+
+.effect3:hover{
+    background-color: rgba(255, 255, 255, 0.36);
+}
+
+.effect3:hover:before{ width: 100%; }
+.effect3:hover:after{ width: 100%; }
+
+.effect4:before,.effect4:after{
+    transition: .2s all linear;
+}
+
+.effect4{
+    background-color: #c8461c;
+}
+
+.effect4:hover{
+    background-color: rgba(200, 70, 28, 0.80);
+}
+
+
+.effect4:after{
+    top: 0;
+    left: 0;
+    background-color: #ff5823;
+    height: 2px;
+    width: 0;
+}
+
+.effect4:hover:after{
+    width: 100%;
+}
+
+.effect4:before{
+    top: 0;
+    right: 0;
+    background-color: #ff5823;
+    height: 0;
+    width: 2px;
+}
+
+.effect4:hover:before{
+    transition-delay: .2s;
+    height: 100%;
+}
+
+.effect4 span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.effect4 span:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #ff5823;
+    height: 2px;
+    width: 0;
+    transition: all .2s linear;
+}
+
+.effect4 span:hover:before{
+    transition-delay: .4s;
+    width: 100%;
+}
+
+.effect4 span:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #ff5823;
+    height: 0;
+    width: 2px;
+    transition: all .2s linear;
+}
+
+.effect4 span:hover:after{
+    transition-delay: .6s;
+    height: 100%;
+}

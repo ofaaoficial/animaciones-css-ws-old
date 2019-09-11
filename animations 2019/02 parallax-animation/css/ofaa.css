@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto-Bold.ttf") format('tff');
+}
+.parallax header{
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.parallax img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.parallax h1{
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 40px;
+    font-family: 'Roboto';
+    color: rgba(255, 255, 255, 0.51);
+    right: 50%;
+    transform: translate(50%, 150%);
+    z-index: 1;
+}
+
+article{
+    font-family: Roboto;
+    color: #323232;
+}
+
+article h2{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+article h2:before{
+    position: absolute;
+    content: '';
+    background: linear-gradient(45deg, #323232, #053f6f);
+    width: 20px;
+    height: 3px;
+    top: 35px;
+    right: 50%;
+}
+
+article p{
+    padding-left: 100px;
+    padding-right: 100px;
+    color: hsla(36, 9%, 22%, 0.84);;
+}

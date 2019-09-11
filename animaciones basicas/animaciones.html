@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .contenedor {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(223, 41, 141);
+            padding: 20px;
+        }
+
+        .circulo{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(92, 15, 62);
+            border-radius: 50%;
+
+            animation-name: circulo /* , se pueden agregar varias animaciones */ ;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;          
+            /* ease -> por defecto */
+            /* ease-in -> mas rapido al inicio */
+            /* ease-out -> mas rapido al final */
+            /* ease-in-out -> mas rapido al inicio y final */
+            /* step() -> frames por segundo. */
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;     
+            animation-delay: 1s;
+            animation-direction: alternate;
+            /* animation-play-state: */
+        }
+
+        @keyframes circulo{
+            0%{ transform: translateY(-50px); }
+            100%{ transform: translateY(0) scale(1 , .8); }
+        }
+
+    </style>
+    <div class="contenedor">
+        <div class="circulo"></div>
+    </div>
+</body>
+
+</html>
